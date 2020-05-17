@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+      <div class="d-flex">
+          <nk-sidebar></nk-sidebar>
+
+          <div class="page-content-wrapper">
+              <nk-navbar></nk-navbar>
+            
+              <div class="container-fluid">
+                  <router-outlet></router-outlet>
+              </div>
+          </div>
+          <nk-footer></nk-footer>
+      </div>
+  `,
 })
 export class AppComponent {
-  title = 'teleport';
+
 }
