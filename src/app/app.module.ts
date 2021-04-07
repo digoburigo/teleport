@@ -11,6 +11,7 @@ import { ProfilePageComponent } from './pages/profile-page.component';
 import { ProjectsPageComponent } from './pages/projects-page.component';
 import { TargetDirective } from './portal/target.directive';
 import { AttachToDirective } from './portal/attach-to.directive';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
@@ -18,15 +19,14 @@ import { AttachToDirective } from './portal/attach-to.directive';
     SidebarComponent,
     NavbarComponent,
     FooterComponent,
-    DashboardPageComponent,
     ProfilePageComponent,
     ProjectsPageComponent,
-    TargetDirective,
-    AttachToDirective
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

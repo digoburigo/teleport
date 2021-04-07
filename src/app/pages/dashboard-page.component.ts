@@ -1,19 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'nk-dashboard-page',
+  selector: "nk-dashboard-page",
   template: `
-    <p>
-      dashboard-page works!
-    </p>
+    <p>dashboard-page works!</p>
+    <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [],
 })
 export class DashboardPageComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
