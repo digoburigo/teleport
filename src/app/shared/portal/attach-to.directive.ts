@@ -19,8 +19,11 @@ export class AttachToDirective implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.portalService.attachToTarget(this.targetName, this.template);
+
+    // If attach timeout, refresh page works
     // setTimeout(() => {
-      this.portalService.attachToTarget(this.targetName, this.template);
+    //  this.portalService.attachToTarget(this.targetName, this.template);
     // }, 0);
   }
 

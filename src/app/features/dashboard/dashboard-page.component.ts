@@ -1,9 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 
+
 @Component({
   selector: "nk-dashboard-page",
   template: `
-    <p>dashboard-page works!</p>
+    <p>Dashboard Page</p>
+    <hr />
     <router-outlet></router-outlet>
   `,
   styles: [],

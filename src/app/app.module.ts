@@ -1,34 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SidebarComponent } from './layout/sidebar.component';
-import { NavbarComponent } from './layout/navbar.component';
-import { FooterComponent } from './layout/footer.component';
-import { DashboardPageComponent } from './pages/dashboard-page.component';
-import { ProfilePageComponent } from './pages/profile-page.component';
-import { ProjectsPageComponent } from './pages/projects-page.component';
-import { TargetDirective } from './portal/target.directive';
-import { AttachToDirective } from './portal/attach-to.directive';
-import { SharedModule } from './shared.module';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SidebarComponent,
-    NavbarComponent,
-    FooterComponent,
-    ProfilePageComponent,
-    ProjectsPageComponent,
-   
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

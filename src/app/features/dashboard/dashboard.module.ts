@@ -1,20 +1,19 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { SharedModule } from "../shared.module";
 
 import { DashboardPageComponent } from "./dashboard-page.component";
-import { SubDashComponent } from "./sub-dash.component";
 
 const routes: Routes = [
   {
     path: "",
     component: DashboardPageComponent,
     children: [
+      { path: "", pathMatch: "full", redirectTo: "sub" },
       {
         path: "sub",
         loadChildren: () =>
-          import("./sub-dash.module").then((m) => m.SubDashModule),
+          import("../sub-dash/sub-dash.module").then((m) => m.SubDashModule),
       },
     ],
   },
