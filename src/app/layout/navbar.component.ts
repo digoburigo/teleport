@@ -22,7 +22,7 @@ import { Component, OnInit } from "@angular/core";
       }
 
       .mr-2 {
-        margin-right 20px;
+        margin-right: 20px;
       }
 
       .where-to-render {
